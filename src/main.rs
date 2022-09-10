@@ -15,3 +15,14 @@ fn main() {
 fn calculate_weight_on_mars(weigth: f32) -> f32 {
     (weigth / 9.81) * 3.711
 }
+
+// write tests here
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_calculate_weight_on_mars() {
+        assert_eq!(calculate_weight_on_mars(50.0), 18.914373);
+    }
+}
